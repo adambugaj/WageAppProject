@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wage App</title>
+    <meta charset="utf-8">
+        <title>Issue App</title>   
+        <link rel="stylesheet" type="text/css" href="wageup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            
+            <!-- the title and desc -->
+            <h1 class="display-4 text-center">WageApp</h1>
+            <p class="h6 text-center" id="paragraphTitle">This is a simple App for calculating wage by year, month, day and hour</p>
+            <hr class="my-4">
+            
+            <!-- input-form -->
+            <form>
+                <div class="form-group">
+                    <label for="annualInput">Your annual wage</label>
+                    <input type="annualData" class="form-control" id="annualInput" aria-describedby="hep" placeholder="Annual wage in $">
+                    <small id="help" class="form-text text-muted">We'll never share your wage with anyone else.</small>
+                </div>
+                <button onclick="wage()" type="button" class="btn btn-primary btn-sm" id="checkButton">Check</button>
+            </form>
+        </div>
+        <div class="alert alert-success" role="alert" id="resultMonthly">
+        </div>
+        <div class="alert alert-info" role="alert" id="resultDaily">
+        </div>
+        <div class="alert alert-warning" role="alert" id="resultHourly">
+        </div>
+    </div>
+    
+    
+    
+    <!-- JS -->
+        <script type="text/javascript" src="wageUp.js">
+    <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</body>
+
+</html>
