@@ -5,17 +5,6 @@ function wage() {
     output.innerHTML = input;
     
     
-  /*  check and test
-    if (input !== '') {
-        // this if doesn't work even with string and number
-         if (typeof input == 'number')
-            document.getElementById('result').innerHTML = input;
-    } else {
-        document.getElementById('result').innerHTML = 'Please, type your annual wage';
-    }
-    
-    */
-    
     // annual wage devided by 12 months
     let resultMonthly = input / 12;
     let showMonthly = 'Your monthly wage: ' + resultMonthly.toFixed(2);
@@ -64,14 +53,31 @@ function wage() {
     }
     document.getElementById('devOutput').innerHTML = "Estimated wage for " + dev + ": " + storeWage;
     
-}
-
-    // switch option for wage occupation
-//    function wageOccupation() {
-//        var storeWage;
-//        var takeWage = 
+    
+      //  check and test
+    let getValue = document.getElementById("annualInput").value
+    
+//    let numberValue = +getValue || getValue;
+//    alert(typeof numberValue);
+//   
+//    if (numberValue !== '') {
+//        // this if doesn't work even with string and number
+//         if (typeof numberValue == 'number')
+//            document.getElementById('devOutput').innerHTML = "great " + numberValue;
+//        else alert("try again")
+//    } else {
+//        document.getElementById('devOutput').innerHTML = 'Please, type your annual wage';
 //    }
-
+    if (!isNaN(getValue)) {
+        document.getElementById("devOutput").innerHTML = getValue;Number(getValue);
+    } else {
+        document.getElementById('devOutput').innerHTML = 'Please, type your annual wage';
+    }
+    alert(typeof getValue)
+//    let numberValue = !isNaN(Number(getValue)) ? Number(getValue) : document.getElementById('devOutput').innerHTML = 'Please, type your annual wage';
+//    alert(typeof numberValue);
+    
+}
 
 
 
