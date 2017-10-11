@@ -3,7 +3,7 @@ function wage() {
     let output = document.getElementById('resultMonthly');
     // it doesn't work, but it works with pure document.getElementById('result').innerHTML = input;
     output.innerHTML = input;
-
+    
     
   /*  
     if (input !== '') {
@@ -29,18 +29,23 @@ function wage() {
     let showHourly = 'Your hourly wage: ' + resultHourly.toFixed(2);
     
     input = +input;
-    
-     if (input !== '') {
-         if (typeof input === 'number')
-        document.getElementById('resultMonthly').innerHTML = showMonthly + ' $';
-        document.getElementById('resultDaily').innerHTML = showDaily + ' $';
-        document.getElementById('resultHourly').innerHTML = showHourly + ' $';
+
+    // check if input is empty and if string is number
+     if (input) {
+         if (isNaN(input) !== true) {
+            document.getElementById('resultMonthly').innerHTML = showMonthly + ' $';
+            document.getElementById('resultDaily').innerHTML = showDaily + ' $';
+            document.getElementById('resultHourly').innerHTML = showHourly + ' $';
+         } 
+         else {
+            document.getElementById('resultMonthly').innerHTML = 'Please, type your annual wage';
+         }
     } else {
         document.getElementById('resultMonthly').innerHTML = 'Please, type your annual wage';
+        document.getElementById('resultDaily').innerHTML = "e.g 125000";
+        document.getElementById('resultHourly').innerHTML = "and click the button 'check'";
     }
 }
 
-let showHourly = 5;
 
 
-document.write(showHourly);

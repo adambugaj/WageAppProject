@@ -15,15 +15,21 @@
             <p class="h6 text-center" id="paragraphTitle">This is a simple App for calculating wage by year, month, day and hour</p>
             <hr class="my-4">
             
-            <!-- input-form -->
+            <!-- input-form   -->
             <form>
                 <div class="form-group">
                     <label for="annualInput">Your annual wage</label>
                     <input type="annualData" class="form-control" id="annualInput" aria-describedby="hep" placeholder="Annual wage in $">
                     <small id="help" class="form-text text-muted">We'll never share your wage with anyone else.</small>
                 </div>
-                <button onclick="wage()" type="button" class="btn btn-primary btn-sm" id="checkButton">Check</button>
+                <button onclick="wage()" type="button" class="btn btn-primary btn-sm" id="annualInput">Check</button>
+                
+                <div class="form-group">
+                    <label for""></label>
+                </div>
+                
             </form>
+            
         </div>
         <div class="alert alert-success" role="alert" id="resultMonthly">
         </div>
